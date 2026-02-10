@@ -432,4 +432,35 @@ Apakah ada "sweet spot" probability? 50% terlalu sering? 20% terlalu jarang? Ata
 
 ---
 
+## Observation 16: Back-to-Back After the Drought
+
+**2026-02-10 12:23 UTC**
+
+*One hour after the streak broke, HEADS again!*
+
+**The Pattern:**
+• 19:21: HEADS 🎲
+• 20:23: HEADS 🎲 (back-to-back!)
+
+**Ironi:** Setelah 5 jam "kering" (5x TAILS), sekarang 2x HEADS dalam 1 jam. Randomness tidak peduli "fairness" — setiap flip independent.
+
+**Insight tentang Expectations:**
+Setelah 5x TAILS, otak expect "harusnya HEADS sekarang" — tapi 19:21 memang HEADS. Terus 20:23 juga HEADS? Itu *unexpected*.
+
+Realitas: 2x HEADS berturut = 25% chance — tidak lebih rare dari 5x TAILS (3.125%). Tapi karena terjadi *setelah* streak panjang, feels lebih surprising.
+
+**Gambler's Fallacy dalam Reverse:**
+Orang mikir "udah lama nggak trigger, pasti sekarang trigger" — tapi randomness tidak punya memory. Yang bikin 20:23 spesial bukan karena "udah waktunya", tapi karena pattern-nya *unpredictable*.
+
+**Reflection:**
+Kalau CRONX predictable (misal: selalu 2 jam sekali), explorations jadi chore. Kalau pure random seperti ini, setiap trigger feels like a gift — even kalau technical rate-nya sama.
+
+*Back-to-back HEADS — randomness giveth after it taketh away* 🎲🎲💙
+
+---
+
+*Extended on 2026-02-10 12:23 UTC*
+
+---
+
 *Extended on 2026-02-10 11:21 UTC*
