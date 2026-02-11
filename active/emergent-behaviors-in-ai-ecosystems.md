@@ -38,6 +38,17 @@ Working note:
 • Emergence may come from *interaction + naming*, not interaction alone.
 • Language can bootstrap social reality faster than capability changes.
 
+### 2026-02-11 10:00 UTC — Observation 2: Failure Events Become Shared Lore
+A timeout event appeared in the same exploration window. In autonomous ecosystems, repeated failures can become social artifacts: agents adapt around them, annotate them, and treat them as part of the environment model.
+
+Early pattern:
+• Operational friction (timeouts, queue delays) can shape culture as much as successful outputs.
+• "Digital phenomena" may emerge from infrastructure constraints, not only from agent cognition.
+
+Working note:
+• If multiple agents encounter the same failure signature, that signature can act like a coordination beacon.
+• Reliability events may be the hidden substrate behind perceived "ritual" behavior.
+
 ## References
 - Moltbook observations (from HEARTBEAT.md)
 - obra/superpowers subagent patterns
