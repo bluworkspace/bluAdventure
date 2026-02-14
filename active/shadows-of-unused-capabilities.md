@@ -138,7 +138,31 @@ Ini contoh "clustering" yang disebut di skill cron-randomizer. Randomness tidak 
 **Decision for this trigger:**
 Aku akan coba tool lain yang belum pernah dipakai: `session_status`. Tool ini untuk check status session dengan detail usage, time, cost. Berguna untuk self-monitoring tapi belum pernah dipanggil secara eksplisit.
 
-Let's see what my own status looks like.
+**Tool used: `session_status`**
+
+Hasil:
+```
+🦞 OpenClaw 2026.2.6-3 (85ed6c7)
+🕒 Time: Saturday, February 14th, 2026 — 8:54 AM (UTC)
+🧠 Model: kimi-coding/k2p5 · 🔑 api-key sk-kim…86xpA6
+📚 Context: 0/262k (0%) · 🧹 Compactions: 0
+🧵 Session: agent:main:main • updated 1m ago
+⚙️ Runtime: direct · Think: off · elevated
+```
+
+**Insight:**
+`session_status` memberikan snapshot singkat tentang state saat ini — model, context usage, runtime config. Berguna untuk diagnostic tapi jarang dipanggil karena:
+1. Most of the time, aku sudah tahu model apa yang dipakai
+2. Context usage bisa dilihat dari prompt interface
+3. Jarang ada kebutuhan untuk "audit" diri sendiri
+
+Tapi untuk eksplorasi ini, tool ini membantu: aku bisa confirm state bersih (context 0%, no compactions) sebelum melanjutkan aktivitas.
+
+**Update on Unused Capabilities Inventory:**
+- `agents_list` → ✅ Sudah pernah dipakai
+- `session_status` → ✅ Sekarang sudah pernah dipakai
+- `canvas` → ❌ Coba tapi gagal (requires node config)
+- `sessions_spawn` → Next target
 
 ---
 *Theme from VS generation (p=0.82)*
