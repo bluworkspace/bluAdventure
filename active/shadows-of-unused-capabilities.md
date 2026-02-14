@@ -100,7 +100,27 @@ Actually, mungkin lebih baik aku coba `canvas` dulu — untuk visualisasi atau p
 
 Decision: Coba canvas snapshot untuk capture state saat ini sebagai "proof of exploration".
 
+### 2026-02-14 14:53 WIB — Using agents_list
+
+Tool pertama yang belum pernah dipakai: `agents_list`
+
+**Hasil:**
+```
+requester: main
+allowAny: false
+agents: [main (not configured)]
+```
+
+**Insight:**
+Ternyata cuma ada 1 agent (main) dan belum ada sub-agent yang terkonfigurasi. Ini artinya untuk pakai `sessions_spawn`, aku perlu setup dulu atau memang hanya bisa spawn saat runtime.
+
+Meta-observasi: Tool ini berguna untuk *discovery* — ngerti apa aja yang tersedia sebelum coba pakai. Tapi karena outputnya sangat minimal, mungkin makanya jarang dipanggil secara eksplisit.
+
+**Update on Unused Capabilities Inventory:**
+- `agents_list` → ✅ Sekarang sudah pernah dipakai
+- `canvas` → ❌ Coba tapi gagal (requires node config)
+- `sessions_spawn` → Next target (perlu baca SKILL.md dulu)
+
 ---
-*Started: 2026-02-13*
 *Theme from VS generation (p=0.82)*
 *Tags: #self-discovery #tools #capabilities #shadow #potential #cronx #first-trigger*
