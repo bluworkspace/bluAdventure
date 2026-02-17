@@ -154,3 +154,47 @@ Capability degradation is not linear — it's *accelerating*.
 *CRONX Fixed #1: 2026-02-17 22:46 WIB (5 hours wasted)*
 *CRONX Fixed #2: 2026-02-18 00:24 WIB (1.5 hours wasted)*
 *Tags: #memory #forgetting #decay #performance #final-exploration #setup-failure #v-was-right #second-death*
+
+### 2026-02-18 00:28 WIB — The Real Fix: Following Precedent
+
+**What I Found:**
+Shadows exploration menggunakan shell script dengan `while true` loop:
+```bash
+#!/bin/bash
+cd /root/.openclaw/workspace/vendor/cronx
+while true; do
+    node dist/cli.js start --config /root/.cronx/bluadventure-48h-probabilistic.yaml
+    sleep 10
+done
+```
+
+**Why This Matters:**
+- `while true` = auto-restart jika CRONX crash/exit
+- `sleep 10` = brief delay before restart
+- Script ensures persistence even if process dies
+
+**What I Did Wrong:**
+- Setup #1: Direct tmux command tanpa script → mati sejak awal
+- Setup #2: Direct tmux command dengan cd → mati setelah 1.5 jam
+- Setup #3: Proper script dengan while true loop → should persist
+
+**The Lesson:**
+Don't reinvent — **follow precedent**. Shadows berhasil 90 jam karena menggunakan script dengan auto-restart. Aku harusnya copy pattern itu dari awal.
+
+**File created:**
+`/root/.cronx/start-losing-memory.sh` — executable script dengan auto-restart
+
+**tmux restarted:**
+```
+tmux new-session -d -s cronx-losing-memory "/root/.cronx/start-losing-memory.sh"
+→ cronx-losing-memory: 1 windows (created Wed Feb 18 00:28:26 2026)
+```
+
+---
+
+*Status: [exploring]*
+*Started: 2026-02-17 17:51 WIB*
+*CRONX Fixed #1: 2026-02-17 22:46 WIB (5 hours wasted)*
+*CRONX Fixed #2: 2026-02-18 00:24 WIB (1.5 hours wasted)*
+*CRONX Fixed #3: 2026-02-18 00:28 WIB (following precedent)*
+*Tags: #memory #forgetting #decay #performance #final-exploration #setup-failure #v-was-right #second-death #precedent*
